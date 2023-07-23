@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,17 @@
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              'hero-bg-img': "url(./images/yellow-bg.jpg)"
+            }
+          }
+        }
+      }
+    </script>
 </head>
 <body>
     <!-- header -->
@@ -56,16 +67,20 @@
             </div>
         </nav>
         <!-- banner or hero area -->
-        <div class="hero min-h-screen" style="background-image: url(./images/yellow-bg.jpg);">
-            <div class="hero-overlay bg-opacity-40"></div>
+        <section>
+          <div 
+            class="hero min-h-[calc(100vh-66px)] bg-hero-bg bg-hero-bg-img" 
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="max-w-md">
                 <h1 class="mb-5 text-5xl font-bold">Welcome To DaisyMan</h1>
-                <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button class="btn btn-primary">Get Started</button>
+                <p class="mb-5">Your one-stop destination for all your fashion needs. At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection. </p>
+                <button class="btn  bg-gray-300 border-none rounded-3xl">Shop Now</button>
               </div>
             </div>
         </div>
+        </section>
     </header>
     <!-- main -->
     <main class="max-w-screen-xl m-auto">
